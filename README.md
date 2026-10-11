@@ -4,7 +4,7 @@ A secure banking backend built with **Java, Spring Boot, PostgreSQL, and Redis**
 
 The main focus of the project is handling **money movement safely under concurrent requests**. Deposits, withdrawals, and transfers run inside database transactions, while account balances are protected using pessimistic row locking. Transfers acquire account locks in a consistent order so that simultaneous transfers in opposite directions do not create a deadlock.
 
-![API Documentation](docs/swagger.png)
+![API Documentation](Docs/swagger.png)
 
 ---
 
