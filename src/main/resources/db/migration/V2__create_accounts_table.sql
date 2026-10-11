@@ -17,5 +17,5 @@ CREATE TABLE accounts (
 
 CREATE INDEX idx_accounts_user_id ON accounts (user_id);
 
-COMMENT ON TABLE accounts IS 'Bank accounts owned by a user; balance mutations use optimistic (version) and pessimistic (findByIdForUpdate) locking';
-COMMENT ON COLUMN accounts.version IS 'Optimistic locking column mapped by @Version on the Account entity';
+COMMENT ON TABLE accounts IS 'Bank accounts owned by a user; balance mutations use pessimistic row locking via findByIdForUpdate';
+COMMENT ON COLUMN accounts.version IS 'JPA version column retained for entity-level optimistic version tracking';

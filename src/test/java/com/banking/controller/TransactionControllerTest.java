@@ -6,6 +6,7 @@ import com.banking.model.TransactionStatus;
 import com.banking.model.TransactionType;
 import com.banking.security.JwtAuthenticationFilter;
 import com.banking.security.JwtService;
+import com.banking.service.TransactionReportService;
 import com.banking.service.TransactionService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -36,6 +37,9 @@ public class TransactionControllerTest {
 
     @MockitoBean
     private TransactionService transactionService;
+
+        @MockitoBean
+        private TransactionReportService transactionReportService;
 
     @MockitoBean
     private JwtService jwtService;
